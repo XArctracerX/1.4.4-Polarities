@@ -48,7 +48,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
                 Projectile.NewProjectile(player.GetSource_OnHit(target), GetHitboxCenter(player), Vector2.Zero, ProjectileType<ImpactorExplosion>(), damage, 0f, player.whoAmI);
             }
 
-            base.OnHitNPC(player, target, damage, knockBack, crit);
+            // base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void OnHitTiles(Player player)

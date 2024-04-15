@@ -381,30 +381,6 @@ namespace Polarities.Items.Books
             return false;
         }
 
-        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
-        {
-            Tile t = Main.tile[i, j];
-            int style1 = t.TileFrameX / 18;
-            if (style1 > 0)
-            {
-                int itemType1 = BookBase.bookIndexToItemType[style1];
-                if (itemType1 != 0)
-                {
-                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 8, 16, itemType1);
-                }
-            }
-            int style2 = t.TileFrameY / 18;
-            if (style2 > 0)
-            {
-                int itemType2 = BookBase.bookIndexToItemType[style2];
-                if (itemType2 != 0)
-                {
-                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16 + 8, j * 16, 8, 16, itemType2);
-                }
-            }
-            return true;
-        }
-
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = 0;

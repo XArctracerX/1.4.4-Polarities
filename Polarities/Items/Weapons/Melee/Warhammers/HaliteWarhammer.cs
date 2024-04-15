@@ -32,7 +32,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
         {
             target.AddBuff(BuffType<Buffs.Desiccating>(), 300);
 
-            base.OnHitNPC(player, target, damage, knockBack, crit);
+            // base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void AddRecipes()

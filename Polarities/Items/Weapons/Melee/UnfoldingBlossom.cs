@@ -144,13 +144,14 @@ namespace Polarities.Items.Weapons.Melee
 
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
-            damage = (int)(damage * Projectile.scale / 0.75f);
+            Projectile.damage = (int)(Projectile.damage * Projectile.scale / 0.75f);
         }
 
-        public override void ModifyHitPvp(Player target, ref int damage, ref bool crit)/* tModPorter Note: Removed. Use ModifyHitPlayer and check modifiers.PvP */
+        public override void ModifyHitPlayer(Player target, ref Player.HurtModifiers modifiers)
         {
-            damage = (int)(damage * Projectile.scale / 0.75f);
+            Projectile.damage = (int)(Projectile.damage * Projectile.scale / 0.75f);
         }
+      
 
         public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
         {

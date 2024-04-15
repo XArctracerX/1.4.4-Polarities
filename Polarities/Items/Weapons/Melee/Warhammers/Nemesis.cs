@@ -116,7 +116,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
                 }
             }
 
-            base.OnHitNPC(player, target, damage, knockBack, crit);
+            // base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void OnHitTiles(Player player)

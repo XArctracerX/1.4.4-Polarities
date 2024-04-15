@@ -86,7 +86,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
         {
             target.AddBuff(BuffType<Incinerating>(), 120);
 
-            base.OnHitNPC(player, target, damage, knockBack, crit);
+            // base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void AddRecipes()
@@ -241,7 +241,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
             target.AddBuff(BuffType<Incinerating>(), 20);
         }
 
-        public override void OnHitPvp(Player target, int damage, bool crit)/* tModPorter Note: Removed. Use OnHitPlayer and check info.PvP */
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(BuffType<Incinerating>(), 20);
         }

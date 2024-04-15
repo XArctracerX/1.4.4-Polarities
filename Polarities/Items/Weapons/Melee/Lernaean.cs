@@ -92,7 +92,7 @@ namespace Polarities.Items.Weapons.Melee
             Projectile.NewProjectile(Projectile.GetSource_OnHit(target), Projectile.Center, Projectile.velocity, ProjectileType<LernaeanOrbiter>(), Projectile.damage, Projectile.knockBack, Projectile.owner, Projectile.whoAmI);
         }
 
-        public override void OnHitPvp(Player target, int damage, bool crit)/* tModPorter Note: Removed. Use OnHitPlayer and check info.PvP */
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             Projectile.NewProjectile(Projectile.GetSource_OnHit(target), Projectile.Center, Projectile.velocity, ProjectileType<LernaeanOrbiter>(), Projectile.damage, Projectile.knockBack, Projectile.owner, Projectile.whoAmI);
         }

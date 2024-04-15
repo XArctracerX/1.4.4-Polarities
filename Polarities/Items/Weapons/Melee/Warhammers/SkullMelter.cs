@@ -65,7 +65,7 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
         {
             target.AddBuff(BuffID.OnFire, DebuffTime);
 
-            base.OnHitNPC(player, target, damage, knockBack, crit);
+            // base.OnHitNPC(player, target, damage, knockBack, crit);
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)

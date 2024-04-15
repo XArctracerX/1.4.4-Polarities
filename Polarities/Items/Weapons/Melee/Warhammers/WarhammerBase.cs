@@ -40,10 +40,10 @@ namespace Polarities.Items.Weapons.Melee.Warhammers
             Item.ResearchUnlockCount = (1);
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, NPC.HitInfo hit, int damageDone)
-        {
-            Hit(player, target, DefenseLoss, DebuffTime);
-        }
+        // public override void OnHitNPC(Player player, NPC target, int damage, NPC.HitInfo hit, int damageDone)
+        // {
+           // Hit(player, target, DefenseLoss, DebuffTime);
+        // }
 
         //gets the total amount of the swing spent on windup, from 0 to 1
         public float SwingWindup(Player player)

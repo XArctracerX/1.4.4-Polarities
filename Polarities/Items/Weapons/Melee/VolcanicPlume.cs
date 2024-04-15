@@ -169,7 +169,7 @@ namespace Polarities.Items.Weapons.Melee
             target.AddBuff(BuffID.OnFire, 1200);
         }
 
-        public override void OnHitPvp(Player target, int damage, bool crit)/* tModPorter Note: Removed. Use OnHitPlayer and check info.PvP */
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             if (Projectile.ai[0] == 0)
             {
@@ -273,7 +273,7 @@ namespace Polarities.Items.Weapons.Melee
             target.AddBuff(BuffID.OnFire, 1200);
         }
 
-        public override void OnHitPvp(Player target, int damage, bool crit)/* tModPorter Note: Removed. Use OnHitPlayer and check info.PvP */
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(BuffID.OnFire, 1200);
         }
@@ -364,7 +364,7 @@ namespace Polarities.Items.Weapons.Melee
             return false;
         }
 
-        public override void OnHitPvp(Player target, int damage, bool crit)/* tModPorter Note: Removed. Use OnHitPlayer and check info.PvP */
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
         {
             target.AddBuff(BuffID.OnFire, 1200);
             TryExplode();
